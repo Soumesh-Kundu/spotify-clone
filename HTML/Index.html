@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <!-- created and linkink normal styleing file -->
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <!-- created and linking utility syleing file just like bootstrap but self made -->
+    <link rel="stylesheet" href="../CSS/utility.css">
+    <link rel="stylesheet" href="../CSS/songtable.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../JS/songsList.js" defer></script>
+    <script src="../JS/variable.js" defer></script>
+    <script src="../JS/Events.js" defer></script>
+    <script src="../JS/function.js" defer></script>
+    <script src="https://kit.fontawesome.com/5daef4adff.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body class="grid">
+    <!-- creating the whole grid-->
+    <!-- header portion -->
+    <header class="flex align-center">
+        <div class="moving flex align-center justify-center">
+            <i class="fas fa-thin fa-chevron-left" id="arrowleft"></i>
+            <i class="fas fa-2x fa-chevron-right" id="arrowright"></i>
+        </div>
+        <nav class="navbar-primary">
+            <ul class="flex align-center list-none">
+                <li>Playlists</li>
+                <li>Podcast</li>
+                <li>Article</li>
+                <li>Album</li>
+            </ul>
+        </nav>
+        <button class="upgrade-btn pos-abs">
+            Upgrade
+        </button>
+        <div class="account pos-abs box-shadow">
+            <i class="fa fa-solid fa-user"></i>
+            <span>Soumesh Kundu</span>
+            <i class="fa fa-solid fa-caret-down" id="account-toggle"></i>
+        </div>
+        <div id="profilebox">
+            <ul class="list-none">
+                <li>Account</li>
+                <li>Profile</li>
+                <li>Upgrade to Premium</li>
+                <li>Log Out</li>
+            </ul>
+        </div>
+    </header>
+    <!-- header portion -->
+    <!-- aside portion where the logo belongs -->
+    <aside class="inline-block">
+        <img src="../photes/logo/Spotify_Logo_RGB_White.png" class="logo" alt="logo">
+        <nav class="navbar-secondary ">
+            <ul class="menu">
+                <li class="flex align-center"><i class="fa fa-thin fa-house m-2 f-20"></i>Home</li>
+                <li class="flex align-center"><i class="fa fa-thin fa-magnifying-glass m-2 f-20"></i>Search</li>
+                <li class="flex align-center"><i class="fa fa-solid fa-music m-2 f-20"></i>Your library</li>
+            </ul>
+            <ul class="yourplaylist ">
+                <li class="flex align-center"><i class="fa fa-solid fa-square-plus m-2 f-20"></i> Create playlists</li>
+                <div class="hrline flex justify-center">
+                    <div class="line"></div>
+                </div>
+                <li class="flex align-center"><i class="fa fa-solid fa-heart m-2 f-20"></i>Liked Songs</li>
+                <li class="flex align-center active"><i class="fa fa-solid fa-headphones m-2 f-20"></i>Yoo</li>
+                <!-- <li class="flex align-center"><i class="fa fa-regular fa-list-music m-2 f-20" id="s12"></i>Yoo</li> -->
+            </ul>
+        </nav>cur
+    </aside>
+    <!-- aside portion where the logo belongs -->
+    <!-- section has not been coded yet,it will be the last one to style -->
+    <section>
+        <div class="context flex">
+            <img src="../photes/covers/playlist cover.jpg" alt="playlist cover">
+            <div class="playlist flex flex-direction">
+                <span>PLAYLIST</span>
+                <span>Yoo</span>
+            </div>
+        </div>
+        <div class="songlist">
+            <div class="icons flex align-center">
+                <i data-masterplay class="fa fa-solid fa-circle-play m-1 big cur-poi"></i>
+                <i class="fa fa-solid fa-heart m-2 like"></i>
+            </div>
+            <div class="songtable flex flex-direction align-center">
+                <div class="table flex flex-direction">
+                    <div class="thead">
+                        <ul class="list-none flex">
+                            <li class="flex">#</li>
+                            <li class="flex">TITLE</li>
+                            <li class="flex">ALBUM</li>
+                            <li class="flex">DATE ADDED</li>
+                            <li class="flex"><i class="fas fa-solid fa-clock f-18"></i></li>
+                        </ul>
+                    </div>
+                    <div class="break"></div>
+                    <div class="hrline1 flex justify-center">
+                        <div class="line1"></div>
+                        </div>
+                        <div class="tbody flex flex-direction ">
+                            <ul data-song class="flex list-none" >
+                                <li data-index class="flex align-center">1</li>
+                                <li class="flex align-center"><img src="../photes/covers/kiss the rain.jpg"
+                                        alt="cover"><span class="flex flex-direction"><span class="name">kiss The
+                                            rain</span><span class="artist">Yurima</span></span></li>
+                                    <li class="flex align-center">Unknown</li>
+                                    <li class="flex align-center">7/6/2022</li>
+                                <li class="text-right flex align-center">5:00</li>
+                            </ul>
+                            <ul data-song class="flex list-none" >
+                                <li data-index class="flex align-center"> 2 </li>
+                                <li class="flex align-center"><img src="../photes/covers/river flows in you.jpg" alt="cover"><span
+                                        class="flex flex-direction"><span class="name">River Flows in You</span><span
+                                            class="artist">Yurima</span></span></span></li>
+                                    <li class="flex align-center">Unknown</li>
+                                    <li class="flex align-center">7/6/2022</li>
+                                <li class="text-right flex align-center">3:29</li>
+                            </ul>
+                            <ul data-song class="flex list-none" >
+                                <li data-index class="flex align-center" >3</li>
+                                <li class="flex align-center"><img src="../photes/covers/may be.jpg" alt="cover"><span
+                                        class="flex flex-direction"><span class="name">Maybe</span><span
+                                            class="artist">Yurima</span></span></span></li>
+                                    <li class="flex align-center">Unknown</li>
+                                    <li class="flex align-center">7/6/2022</li>
+                                <li class="text-right flex align-center">2:29</li>
+                            </ul>
+                            <ul data-song class="flex list-none" >
+                                <li data-index class="flex align-center">4 </li>
+                                <li class="flex align-center"><img src="../photes/covers/fur elise.jpg" alt="cover"><span
+                                        class="flex flex-direction"><span class="name">Für Elise</span><span
+                                            class="artist">Beethoven</span></span></span></li>
+                                    <li class="flex align-center">Unknown</li>
+                                    <li class="flex align-center">7/6/2022</li>
+                                <li class="text-right flex align-center">2:55</li>
+                            </ul>
+                            <ul data-song class="flex list-none" >
+                                <li data-index class="flex align-center">5 </li>
+                                <li class="flex align-center"><img src="../photes/covers/I giorni.jpg" alt="cover"><span
+                                        class="flex flex-direction"><span class="name">I Giorni</span><span
+                                            class="artist">Ludovico Einaudi</span></span></span></li>
+                                    <li class="flex align-center">Unknown</li>
+                                    <li class="flex align-center">7/6/2022</li>
+                                <li class="text-right flex align-center">6:37</li>
+                            </ul>
+                            <ul data-song class="flex list-none" >
+                                <li data-index class="flex align-center">6 </li>
+                                <li class="flex align-center"><img src="../photes/covers/Experience.jpg" alt="cover"><span
+                                        class="flex flex-direction"><span class="name">Experience</span><span
+                                            class="artist">Ludovico Einaudi</span></span></span></li>
+                                    <li class="flex align-center">Unknown</li>
+                                    <li class="flex align-center">7/6/2022</li>
+                                <li class="text-right flex align-center">6:22</li>
+                            </ul>
+                            <ul data-song class="flex list-none" >
+                                <li data-index class="flex align-center">7 </li>
+                                <li class="flex align-center"><img src="../photes/covers/intersteller.jpg" alt="cover"><span
+                                        class="flex flex-direction"><span class="name">Intersteller</span><span
+                                            class="artist">Hans Zimmer</span></span></span></li>
+                                    <li class="flex align-center">Unknown</li>
+                                    <li class="flex align-center">7/6/2022</li>
+                                <li class="text-right flex align-center">12:55</li>
+                            </ul>
+                            <ul data-song class="flex list-none" >
+                                <li data-index class="flex align-center">8  </li>
+                                <li class="flex align-center"><img src="../photes/covers/symmphony no 5.jpg" alt="cover"><span
+                                        class="flex flex-direction"><span class="name">5th Symphony</span><span
+                                            class="artist">Beethoven</span></span></span></li>
+                                    <li class="flex align-center">Unknown</li>
+                                    <li class="flex align-center">7/6/2022</li>
+                                <li class="text-right flex align-center">4:26</li>
+                            </ul data-song class="flex list-none" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- bottom has not been coded yet -->
+    <div id="bottom" class="flex justify-spa-bet">
+        <div class="song-details">
+            <div class="songcover flex align-center justify-center">
+                <img src="../photes/covers/songcoverforall.jpg" alt="songcover" id="songcover">
+            </div>
+            <div class="songname flex" id="songname">
+            </div>
+            <div class="songartist flex" id="songartist">
+            </div>
+        </div>
+        <div class="myProgressBar-Area flex flex-direction align-center">
+            <ul class="control-button m-5 flex align-center icons-color list-none">
+                <li><i class="material-icons f-12 m-5  cur-poi icons-color" id="shuffle">shuffle</i></li>
+                <li><i class="fa fa-thin fa-backward-step m-1 f-20 cur-poi icons-color" id="previous"></i></li>
+                <li><i data-masterplay class="fa fa-solid fa-circle-play m-1 f-25 cur-poi icons-color "></i></li>
+                <li><i class="fa fa-thin fa-forward-step m-1 f-20 cur-poi icons-color" id="next"></i></li>
+                <li><i class="material-icons md-18 m-5  cur-poi icons-color" id="repeat">repeat</i></li>
+            </ul>
+            <div class="progressArea flex justify-spa-bet align-center m-5">
+                <span class="currenttime">
+                    0:00
+                </span>
+                <div id="progressbar" class="cur-poi">
+                    <div class="currentprogress">
+
+                    </div>
+                </div>
+                <span class="duration">
+                    0:00
+                </span>
+
+            </div>
+        </div>
+        <div class="options flex align-center justify-center">
+            <i class="material-icons m-5 cur-poi">devices</i>
+            <i class="material-icons m-05 cur-poi" id="volumekey">volume_up</i>
+            <input type="range" min="0" max="100" value="100" id="volume">
+        </div>
+    </div>
+</body>
+</html>

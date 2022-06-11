@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*setting grid --> */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    height: 66rem;
+    grid-template-columns: 18% 82%;
+    grid-template-rows: 5% 85% 10% ;
+    grid-template-areas: 
+    "aside header"
+    "aside section"
+    "bottom bottom"
+    ;
+    background-image: linear-gradient(to bottom, rgba(209, 241, 245, 0.856) ,rgba(0,0,0,0.92) 50%);  
+    /* background-image: linear-gradient(to bottom, rgb(166, 218, 224) ,rgba(0,0,0,0.92) 50%);   */
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    /* font-weight:800; */
+    overflow-x: hidden;
+}
+
+header{
+    grid-area: header;
+    /* border: 1px solid black; */
+    height: 10vh;
+    grid-column: span 7;
+    z-index:2;
+    position: sticky;
+    top:0;
+    right:0;
+    /* background-color: rgba(209, 241, 245, 0.856); */
+    transition: background 0.25s;
+}
+aside{
+    grid-area: aside;
+    /* border: 1px solid green;  */
+    height:95vh;
+    background-color: black; 
+    position:sticky;
+    top:0;
+    left:0;
+    /* width:18%;     */
+}
+section{
+    grid-area: section;
+    /* border: 1px solid yellow; */
+    grid-column: span 7;
+    height:95vh;
+    transform: translateY(2em);
+}
+#bottom{
+    grid-area: bottom;
+    /* border: 1px solid blue; */
+    height: 15vh;
+    position:fixed;
+    width: 100%;
+    bottom:0;
+    left:0;
+    background-color:rgb(26, 26, 26);
+    outline: 1px solid rgba(82, 82, 82, 0.75);
+}
+.moving{/* this arrow key to get back on the page or forward, it will not be coded for work because it is a just single page*/
+    margin-left: 2em; 
+}
+#s12{
+    color: white;   
+}
+/*styleing navbar*/
+.navbar-primary{
+    margin-left:2rem
+}
+.navbar-primary li{
+    margin: 1.5rem;
+    cursor: pointer;
+    transition: color 0.30s ease-in-out;
+}
+.navbar-primary li:hover{
+   color: rgba(255, 255, 255, 0.767)
+}
+/*Uprgrade button styling*/
+.upgrade-btn{
+    background: none;
+    border: 0.5px solid black;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    font-weight: 800;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    transition: background-color 0.25s ease-in-out;
+    margin-left: 8rem;
+    right: 17em;
+}
+.upgrade-btn:hover{
+    background-color: black;
+}
+/*acccout portion styiling allong with icons*/
+.account{
+    right: 1.5em;  
+    /* border: 1px solid black */
+    background-color: black;
+    color: white;
+    padding:0.5rem 0.8rem;
+    border-radius: 2.2rem;
+    font-size: 14px;
+    cursor: pointer;
+}
+.account  span{
+    margin: 0 0.5em;
+}
+/*styling logo*/
+aside .logo{
+    /* display: block; */
+    width:54%;
+    margin:1.5em;
+}
+/*styling the profile box, its opacity set to 0 as default but using js made its opacity 1--> code in Main.js */
+#profilebox{
+    border: 1px solid black;
+    position: fixed;
+    right: 4vh;
+    top: 10vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+#profilebox li{
+    margin:0.8rem;
+    padding: 0.2rem;
+    font-weight: 100;
+    color: white;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;  
+}
+.song-details{
+    /* border: 1px solid yellow; */
+    width:25%;
+    display:grid;
+    grid-template-columns: 25% auto ;   
+    grid-template-rows: 55% auto;
+    /* grid-gap: 10px; */
+    grid-template-areas: 
+    "songcover songname"
+    "songcover songartist";
+}
+.myProgressBar-Area{
+    color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    left:-10px;
+    width:45%;
+    padding: 1vh 5vh; 
+    font-weight: 200;
+}
+.options{
+    width: 20%;
+    color:rgba(255, 255, 255, 0.6);
+}
+#progressbar{
+    width:85%;
+    height: 1px;
+    background-color: grey;
+    border-radius: 0.5em;
+}
+.control-buttons>*{
+    margin:0 2vh;
+}
+.myProgressBar-Area li:hover{
+    color:white;
+}
+.progressArea{
+    height: 5vh;
+    width: 90%;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif ;
+}
+.navbar-secondary{
+    color:rgba(255, 255, 255, 0.6);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 40%;
+    grid-template-areas: 
+    "menus"
+    "playlist";
+    grid-gap: 10vh;
+}
+.navbar-secondary li{
+    margin:1.5em 2em ;
+    list-style:none;
+    font-family:'Montserrat', sans-serif;  
+    font-size: 14px;
+    cursor: pointer;
+    /* opacity: 0.6; */
+    transition: color 0.20s ease-in-out;  
+}
+.navbar-secondary li:hover{
+    color: rgba(255, 255, 255, 1);
+}
+.active{
+    color: rgba(255, 255, 255, 1);
+}
+.currentprogress::before{
+    content:'';
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    top:50%;
+    /* display: inline-block; */
+    right:-5px;
+    border-radius: 50%;
+    background:inherit;
+    opacity: 0;
+    z-index:2;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: opacity 0.15s ease-in-out;
+}
+.currentprogress{
+    width: 0%;
+    height: 3px;
+    position: relative;
+    top:-1px;
+    background-color: rgb(80, 161, 80);
+    z-index:1;
+    cursor: pointer;
+}
+#progressbar:hover .currentprogress::before{
+    opacity: 1;
+}
+.songname{
+    /* border:1px solid green; */
+    grid-area: songname;
+    padding: 1vh 1vw;
+    color: rgba(133, 133, 133, 1);
+    font-family:'Inter', sans-serif;
+    font-size: 17px;
+    align-items: flex-end;
+}
+.songcover{
+    grid-area: songcover;
+    /* border:1px solid red;     */
+}
+.songartist
+{
+    grid-area: songartist;
+    padding: 1vh 1vw;
+    /* border:1px solid blue; */
+    color:rgba(133, 133, 133,0.75);
+    font-family: 'Montserrat', sans-serif ;
+    font-size: 12px;
+    align-items: flex-start;
+}
+.songcover img{
+    width: 70%;
+    height: 70%;
+    overflow: hidden;
+    /* border-radius: 50%; */
+    /* box-shadow: 2px 2px 1px black; */
+}
+ .yourplaylist{
+    grid-area: playlist;
+}
+.menu{
+    grid-area: menus;
+}
+.context{
+
+    height:35vh;
+    padding:1rem 2rem;
+    align-items: flex-end;
+    color: white;
+}
+.context img{
+    width: 15em;
+    height: 15em;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.4);
+}
+.playlist span:nth-child(1){
+    font-size:12px
+}
+.playlist span:nth-child(2){
+    font-size: 6rem;
+}
+.playlist{
+    margin:0 2rem;
+}
+.songlist{
+    /* outline: 1px solid red; */
+    background-color: rgba(0, 0, 0, 0.15);
+    height: 45rem;
+    padding:0.7em 0.2rem;
+    width: inherit;
+    transform: translateX(0.2em);
+    /* outline:1px solid red ; */
+}

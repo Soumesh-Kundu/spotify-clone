@@ -1,0 +1,147 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.grid{
+    display: grid;
+}
+.flex{
+    display:flex;
+}
+.flex-direction{
+    flex-direction: column;
+}
+.inline-block{
+    display: inline-block;
+}
+.align-center{
+    align-items: center;
+}
+.align-center-content{
+    align-content: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-spa-aro{
+    justify-content: space-around;
+}
+.justify-spa-bet{
+    justify-content: space-between;
+}
+.justify-spa-eve{
+    justify-content: space-evenly;
+}
+#arrowleft{
+    padding: 5px;
+    margin: 5px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 1.7rem;
+    font-weight: 900;
+    transition: color 0.30s ease-in-out;
+}
+#arrowright{
+    margin: 5px;
+    padding: 5px;
+    color: rgba(255, 255, 255, 0.55);   
+    font-size: 1.7rem;
+    font-weight: 900;
+    transition: color 0.30s ease-in-out;
+}
+#arrowleft:hover,#arrowright:hover{
+    color:white;
+}
+.list-none{
+    list-style: none;
+}
+.pos-abs{
+    position: absolute;
+}
+.m-5{
+    margin:1vh 1vw;
+}
+.m-1{
+    margin: 1vh 1vw;
+}
+.f-20{
+    font-size: 25px;
+}
+.f-12{
+    font-size: 12px;
+}
+.f-18{
+    font-size: 16px;
+}
+.f-25{
+    font-size: 30px;
+    color:white;
+}
+.m-2{
+    margin-right: 1.2rem;
+}
+.cur-poi{
+    cursor: pointer;
+}
+.box-shadow{
+    box-shadow: -2px 0px 2px  rgba(0, 0, 0, 0.75), 2px 0px 2px   rgba(0, 0, 0, 0.75);
+}
+.hrline{
+    width:100%;
+    height:3px;
+    
+}
+.hrline1{
+    width:97%;
+    height:3px;
+}
+.line{
+    width:95%;
+    height: 1px;
+    background-color:rgba(255, 255, 255, 0.15)
+}
+.line1{
+    width:100%;
+    height: 1px;
+    background-color:rgba(255, 255, 255, 0.15)
+}
+input[type="range"]{
+    width:8vw;
+    height:1px;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb
+{ 
+    outline: none;
+    color: rgb(80, 161, 80);
+    cursor:pointer;
+}
+.m-05{
+    margin: 1vh 0.5vw;
+}
+.big{
+    font-size: 55px;
+    z-index:3;
+    background-color: black;
+    border-radius: 50%;
+    color: rgb(65, 197, 72)
+}
+.big:hover {
+    color:rgb(64, 153, 64)
+}
+.like{
+    font-size: 32px;
+    color:rgb(65, 197, 72)
+}
+.icons>*{
+    margin:0 0.3em
+}
+.songtable{
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Inconsolata', monospace;  
+}
+.text-right{
+    text-align: right;
+}
+.break{
+    height: 5px;
+}
