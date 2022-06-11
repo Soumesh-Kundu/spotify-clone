@@ -104,44 +104,6 @@
     height: 1px;
     background-color:rgba(255, 255, 255, 0.15)
 }
-input[type="range"]{
-    width:8vw;
-    height:1px;
-    outline: none;
-}
-input[type="range"]::-webkit-slider-thumb
-{ 
-    outline: none;
-    color: rgb(80, 161, 80);
-    cursor:pointer;
-}
 .m-05{
     margin: 1vh 0.5vw;
-}
-.big{
-    font-size: 55px;
-    z-index:3;
-    background-color: black;
-    border-radius: 50%;
-    color: rgb(65, 197, 72)
-}
-.big:hover {
-    color:rgb(64, 153, 64)
-}
-.like{
-    font-size: 32px;
-    color:rgb(65, 197, 72)
-}
-.icons>*{
-    margin:0 0.3em
-}
-.songtable{
-    color: rgba(255, 255, 255, 0.5);
-    font-family: 'Inconsolata', monospace;  
-}
-.text-right{
-    text-align: right;
-}
-.break{
-    height: 5px;
 }
