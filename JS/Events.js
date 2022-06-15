@@ -1,7 +1,7 @@
 window.addEventListener('load',()=>{
     audioelement.addEventListener('timeupdate',()=>{
         audioelement.volume = recent_volume.value / 100
-        console.log(audioelement.volume)
+        // console.log(audioelement.volume)
     })
 })
 window.addEventListener('scroll',()=>{
@@ -137,18 +137,21 @@ repeat.addEventListener("click", () => {
 })
 volumekey.addEventListener('click', () => {
     if (volumekey.innerText == 'volume_up' || volumekey.innerText == 'volume_down') {
-        volumebar = audioelement.volume
+        volumebar = recent_volume.value
+        recent_volume.value=0
         volumekey.innerText = "volume_off"
-        audioelement.volume = 0
+        audioelement.volume = recent_volume.value
     }
     else {
         if (volumebar >= 0.5) {
             volumekey.innerText = 'volume_up'
-            audioelement.volume = volumebar
+            recent_volume.value= volumebar
+            audioelement.volume = recent_volume.value/100
         }
         else {
             volumekey.innerText = 'volume_down'
-            audioelement.volume = volumebar
+            recent_volume.value = volumebar
+            audioelement.volume = recent_volume.value/100
         }
     }
 })
