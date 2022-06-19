@@ -1,20 +1,19 @@
-window.addEventListener('load',()=>{
-    audioelement.addEventListener('timeupdate',()=>{
+window.addEventListener('load', () => {
+    audioelement.addEventListener('timeupdate', () => {
         audioelement.volume = recent_volume.value / 100
         // console.log(audioelement.volume)
     })
 })
-window.addEventListener('scroll',()=>{
-    let thead_top=thead.getBoundingClientRect().top
-    let nav_left=navbar.getBoundingClientRect().left
-    let nav_bottom=navbar.getBoundingClientRect().bottom
+window.addEventListener('scroll', () => {
+    let thead_top = thead.getBoundingClientRect().top
+    let nav_left = navbar.getBoundingClientRect().left
+    let nav_bottom = navbar.getBoundingClientRect().bottom
     // console.log(nav_loc)
-    if(thead_top<=nav_bottom)
-    {
-        navbar.style.background="rgb(166, 218, 224)"
+    if (thead_top <= nav_bottom) {
+        navbar.style.background = "rgb(166, 218, 224)"
     }
-    else{
-        navbar.style.background=''
+    else {
+        navbar.style.background = ''
     }
 })
 audioelement.addEventListener("timeupdate", () => {
@@ -51,6 +50,18 @@ accountToggle.addEventListener('click', () => {
     }
 })
 
+masterplay_arrey.forEach(element =>{
+    element.addEventListener('click', () => {
+        if (audioelement.paused && audioelement.src != '') {
+            audioelement.play()
+            toggle_Play()
+        }
+        else {
+            audioelement.pause();
+            toggle_Pause()
+        }
+    })
+})
 masterplay_arrey[0].addEventListener('click', () => {
     if (songindex === songArray.length) {
         songindex = 0
@@ -59,30 +70,13 @@ masterplay_arrey[0].addEventListener('click', () => {
         audioelement.play()
         toggle_Play()
     }
-    else if (audioelement.paused && audioelement.src != '') {
-        audioelement.play()
-        toggle_Play()
-    }
-    else {
-        audioelement.pause();
-        toggle_Pause()
-    }
 })
-masterplay_arrey[1].addEventListener('click', () => {
-    if (audioelement.paused && audioelement.src!='') {
-        audioelement.play()
-        toggle_Play()
-    }
-    else {
-        audioelement.pause();
-        toggle_Pause()
-    }
-})
+
 progressArea.addEventListener('click', (e) => {
     let proogresswidth = progressArea.clientWidth
     let clickedOffsetX = e.offsetX
     let songduration = audioelement.duration
-    audioelement.currentTime = (clickedOffsetX / proogresswidth) * audioelement.duration
+    audioelement.currentTime = (clickedOffsetX / proogresswidth) * songduration
 })
 next.addEventListener('click', () => {
     if (shuffle.innerText == "shuffle_on") {
@@ -105,7 +99,7 @@ previous.addEventListener('click', () => {
     }
 })
 recent_volume.addEventListener('change', () => {
-    audioelement.addEventListener('timeupdate',()=>{
+    audioelement.addEventListener('timeupdate', () => {
         audioelement.volume = recent_volume.value / 100
         console.log(audioelement.volume)
     })
@@ -138,20 +132,20 @@ repeat.addEventListener("click", () => {
 volumekey.addEventListener('click', () => {
     if (volumekey.innerText == 'volume_up' || volumekey.innerText == 'volume_down') {
         volumebar = recent_volume.value
-        recent_volume.value=0
+        recent_volume.value = 0
         volumekey.innerText = "volume_off"
         audioelement.volume = recent_volume.value
     }
     else {
         if (volumebar >= 0.5) {
             volumekey.innerText = 'volume_up'
-            recent_volume.value= volumebar
-            audioelement.volume = recent_volume.value/100
+            recent_volume.value = volumebar
+            audioelement.volume = recent_volume.value / 100
         }
         else {
             volumekey.innerText = 'volume_down'
             recent_volume.value = volumebar
-            audioelement.volume = recent_volume.value/100
+            audioelement.volume = recent_volume.value / 100
         }
     }
 })
