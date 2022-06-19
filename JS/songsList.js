@@ -47,4 +47,10 @@ const songArray=[
         src:"../songs/5th Symophony.mp3",
         cover:"../photes/covers/symmphony no 5.jpg"
     },
+    {
+        songname:"Dive Back In Time",
+        artist:"JAWS",
+        src:"../songs/Dive back in time.mp3",
+        cover:"../photes/covers/Dive back in time.jpg"
+    },
 ]
