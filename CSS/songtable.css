@@ -93,11 +93,6 @@
     background-image: linear-gradient(to bottom, rgba(72, 73, 73, 0.575), rgba(95, 95, 95, 0.596));
 }
 
-.songtable .tbody ul:hover li[data-index] {
-    /* visibility: hidden; */
-    content: 'play'
-}
-
 .songtable ul {
     padding: 0 0.5rem;
     margin: 0.2rem 0;
