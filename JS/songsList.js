@@ -53,4 +53,10 @@ const songArray=[
         src:"../songs/Dive back in time.mp3",
         cover:"../photes/covers/Dive back in time.jpg"
     },
+    {
+        songname:"You Are The Reason",
+        artist:"Calum Scott",
+        src:"../songs/You are the Reason.mp3",
+        cover:"../photes/covers/you are the reason.jpg"
+    },
 ]

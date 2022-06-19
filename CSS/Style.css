@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    height: 73.5rem;
+    height: 78rem;
     grid-template-columns: 18% 82%;
     grid-template-rows: 5% 85% 10%;
     grid-template-areas:
