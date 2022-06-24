@@ -343,17 +343,74 @@ aside .logo {
 }
 
 input[type="range"] {
+    -webkit-apperence: none;
+    -ms-progress-appearance: none;
+    appearance: none;
     width: 8vw;
-    height: 1px;
+    height: 3px;
+    border-radius: 10px;
     outline: none;
 }
 
 input[type="range"]::-webkit-slider-thumb {
+    -webkit-apperence: none;
+    appearance: none;
     outline: none;
-    color: rgb(80, 161, 80);
     cursor: pointer;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: rgb(80, 161, 80);
+    transform: translateY(-50%);
+    position: relative;
+    top: 2px;
 }
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-apperence: none;
+    appearance: none;
+    outline: none;
+    background-color: rgba(133, 133, 133, 0.75);
+    cursor: pointer;
+    height: 3px;
+    border-radius: 50%;
+}       
 
+input[type="range"]::-ms-thumb {
+    -webkit-apperence: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: rgb(80, 161, 80);
+    transform: translateY(-50%);
+    position: relative;
+    top: 2px; 
+}
+input[type="range"]::-ms-track {
+    -webkit-apperence: none;
+    appearance: none;
+    outline: none;
+    background-color: rgba(133, 133, 133, 0.75);
+    cursor: pointer;
+    height: 3px;
+    border-radius: 50%;
+}       
+.volume{
+    /* outline: 1px solid red; */
+    position: relative;
+    isolation: isolate;
+}
+#range-track{
+    position:absolute;
+    height: 4px;
+    /* width: 100%; */
+    top:0;
+    /* transform: translateY(50%); */
+    z-index: 1;
+    background-color: rgb(78, 194, 78);
+}
 .big {
     font-size: 55px;
     z-index: 3;

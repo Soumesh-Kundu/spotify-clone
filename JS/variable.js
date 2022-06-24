@@ -21,6 +21,7 @@ const names=Array.from(document.querySelectorAll(".name"))
 const indexs=Array.from(document.querySelectorAll('[data-index]'))
 const thead=document.querySelector(".songlist")
 const navbar=document.querySelector('header')
+const range_track=document.getElementById('range-track')
 // console.log(navbar.get)
 let progressWidth
 let audiocurrent

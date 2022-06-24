@@ -1,9 +1,11 @@
 window.addEventListener('load', () => {
+    range_track.style.width=`${recent_volume.value}%` 
     audioelement.addEventListener('timeupdate', () => {
-        audioelement.volume = recent_volume.value / 100
+        audioelement.volume = recent_volume.value / 100      
         // console.log(audioelement.volume)
     })
 })
+console.log(range_track.style.width)
 window.addEventListener('scroll', () => {
     let thead_top = thead.getBoundingClientRect().top
     let nav_left = navbar.getBoundingClientRect().left
@@ -98,10 +100,17 @@ previous.addEventListener('click', () => {
         previousmusic()
     }
 })
+// recent_volume.addEventListener('click',(e)=>{
+//     let mouoffsetx=e.offsetX
+//     let widthvolume=recent_volume.style.width
+//     recent_volume.value=mouoffsetx/widthvolume*100
+// })
 recent_volume.addEventListener('change', () => {
+    range_track.style.width=`${recent_volume.value}%`
     audioelement.addEventListener('timeupdate', () => {
         audioelement.volume = recent_volume.value / 100
         console.log(audioelement.volume)
+       
     })
     if (recent_volume.value == 0) {
         volumekey.innerText = 'volume_off'
