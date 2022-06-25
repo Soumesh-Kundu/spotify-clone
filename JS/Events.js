@@ -100,11 +100,6 @@ previous.addEventListener('click', () => {
         previousmusic()
     }
 })
-// recent_volume.addEventListener('click',(e)=>{
-//     let mouoffsetx=e.offsetX
-//     let widthvolume=recent_volume.style.width
-//     recent_volume.value=mouoffsetx/widthvolume*100
-// })
 recent_volume.addEventListener('change', () => {
     range_track.style.width=`${recent_volume.value}%`
     audioelement.addEventListener('timeupdate', () => {
@@ -144,17 +139,20 @@ volumekey.addEventListener('click', () => {
         recent_volume.value = 0
         volumekey.innerText = "volume_off"
         audioelement.volume = recent_volume.value
+        range_track.style.width=`${recent_volume.value}%`
     }
     else {
         if (volumebar >= 0.5) {
             volumekey.innerText = 'volume_up'
             recent_volume.value = volumebar
             audioelement.volume = recent_volume.value / 100
+            range_track.style.width=`${recent_volume.value}%`
         }
         else {
             volumekey.innerText = 'volume_down'
             recent_volume.value = volumebar
             audioelement.volume = recent_volume.value / 100
+            range_track.style.width=`${recent_volume.value}%`
         }
     }
 })
