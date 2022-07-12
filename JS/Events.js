@@ -12,7 +12,7 @@ window.addEventListener('scroll', () => {
     let nav_bottom = navbar.getBoundingClientRect().bottom
     // console.log(nav_loc)
     if (thead_top <= nav_bottom) {
-        navbar.style.background = "rgb(166, 218, 224)"
+        navbar.style.background = "rgb(82, 82, 82)"
     }
     else {
         navbar.style.background = ''
