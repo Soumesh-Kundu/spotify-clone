@@ -142,13 +142,13 @@ volumekey.addEventListener('click', () => {
         range_track.style.width=`${recent_volume.value}%`
     }
     else {
-        if (volumebar >= 0.5) {
+        if (volumebar >= 50) {
             volumekey.innerText = 'volume_up'
             recent_volume.value = volumebar
             audioelement.volume = recent_volume.value / 100
             range_track.style.width=`${recent_volume.value}%`
         }
-        else {
+        else{
             volumekey.innerText = 'volume_down'
             recent_volume.value = volumebar
             audioelement.volume = recent_volume.value / 100
