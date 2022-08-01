@@ -185,7 +185,7 @@ aside .logo {
 
 #progressbar {
     width: 85%;
-    height: 1px;
+    height: 2px;
     background-color: grey;
     border-radius: 0.5em;
 }
@@ -253,7 +253,7 @@ aside .logo {
 
 .currentprogress {
     width: 0%;
-    height: 3px;
+    height: 4px;
     position: relative;
     top: -1px;
     background-color: rgb(80, 161, 80);
