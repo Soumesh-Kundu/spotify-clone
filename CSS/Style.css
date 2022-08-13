@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    height: 78rem;
+    min-height: 78rem;
     grid-template-columns: 18% 82%;
     grid-template-rows: 5% 85% 10%;
     grid-template-areas:
@@ -54,7 +54,7 @@ section {
     grid-area: section;
     /* border: 1px solid yellow; */
     grid-column: span 7;
-    height: 95vh;
+    min-height: 95vh;
     transform: translateY(2em);
 }
 
