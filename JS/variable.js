@@ -2,7 +2,6 @@ const accountToggle = document.getElementById("account-toggle")//taking the acco
 const profilebox = document.getElementById("profilebox")//taking the profile box for manupulations
 const masterplay = document.querySelectorAll("[data-masterplay]")
 const masterplay_arrey=Array.from(masterplay)
-let audioelement = new Audio()
 const progressbar = document.querySelector(".currentprogress")
 const durationtime = document.querySelector(".duration")
 const progressArea= document.getElementById("progressbar")
@@ -22,7 +21,9 @@ const indexs=Array.from(document.querySelectorAll('[data-index]'))
 const thead=document.querySelector("section")
 const navbar=document.querySelector('header')
 const range_track=document.getElementById('range-track')
-// console.log(navbar.get)
+
+//JS Variables 
+let audioelement = new Audio()
 let progressWidth
 let audiocurrent
 let audioduration
